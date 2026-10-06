@@ -13,6 +13,28 @@ services:
         volumes:
             - pg_data:/var/lib/postgresql
 
+    backend:
+        image: rust:1.99.0-bookworm
+        command: sleep infinity
+        ports:
+            - "127.0.0.1:3000:3000"
+        environment:
+            DATABASE_HOST: database
+            CLAUDE_CONFIG_DIR: /root/.claude
+        volumes:
+            - .:/workspace
+            - cargo_target:/workspace/target
+            - cargo_registry:/usr/local/cargo/registry
+            - claude_config:/root/.claude
+        cap_add:
+            - SYS_PTRACE
+        security_opt:
+            - seccomp:unconfined
+        depends_on:
+            - database
+
 volumes:
     pg_data:
-        name: database_data
+    cargo_target:
+    cargo_registry:
+    claude_config:
