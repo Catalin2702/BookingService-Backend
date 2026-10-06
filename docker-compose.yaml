@@ -21,4 +21,3 @@ secrets:
 
 volumes:
     pg_data:
-        name: database_data
