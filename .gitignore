@@ -3,6 +3,8 @@
 
 # Config
 .env
+/secrets/
 
 # Local
 /.memory/
+/graphify-out/
