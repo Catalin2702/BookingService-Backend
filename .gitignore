@@ -6,5 +6,6 @@
 /secrets/
 
 # Local
+/.idea/
 /.memory/
 /graphify-out/
