@@ -1,0 +1,18 @@
+{
+	"name": "booking-service",
+	"dockerComposeFile": [
+		"../docker-compose.dev.yaml"
+	],
+	"service": "backend",
+	"workspaceFolder": "/workspace",
+	"shutdownAction": "stopCompose",
+	"postCreateCommand": "rustup component add rustfmt clippy",
+	"customizations": {
+		"jetbrains": {
+			"backend": "RustRover"
+		}
+	},
+	"features": {
+		"ghcr.io/anthropics/devcontainer-features/claude-code:1": {}
+	}
+}
