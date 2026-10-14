@@ -1,0 +1,7 @@
+target
+.env
+secrets
+.git
+.idea
+.memory
+graphify-out
