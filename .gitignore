@@ -3,6 +3,7 @@
 
 # Config
 .env
+.env.prod
 /secrets/
 
 # Local

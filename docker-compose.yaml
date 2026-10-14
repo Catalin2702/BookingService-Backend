@@ -1,4 +1,4 @@
-name: booking-service
+name: booking_service
 
 services:
     database:

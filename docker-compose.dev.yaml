@@ -1,4 +1,4 @@
-name: booking-service
+name: booking_service
 
 services:
     backend:
@@ -8,7 +8,6 @@ services:
             - database
         env_file: .env
         environment:
-            DATABASE_HOST: database
             DATABASE_PASSWORD_FILE: "/run/secrets/postgres_password"
         secrets:
             - postgres_password

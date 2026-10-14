@@ -5,9 +5,9 @@ COPY src ./src
 RUN --mount=type=cache,target=/usr/local/cargo/registry \
     --mount=type=cache,target=/app/target \
     cargo build --release --locked \
-    && cp target/release/booking-service /booking-service
+    && cp target/release/booking_service /booking_service
 
 FROM debian:bookworm-slim
-COPY --from=builder /booking-service /usr/local/bin/booking-service
+COPY --from=builder /booking_service /usr/local/bin/booking_service
 EXPOSE 3000
-CMD ["booking-service"]
+CMD ["booking_service"]
