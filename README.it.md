@@ -121,3 +121,7 @@ cargo test
 cargo clippy --all-targets
 cargo fmt
 ```
+
+## Licenza
+
+Rilasciato con [licenza MIT](LICENSE): puoi usare, modificare e ridistribuire il codice, a condizione di mantenere la nota di copyright che cita l'autore.
